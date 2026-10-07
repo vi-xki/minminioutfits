@@ -1,0 +1,103 @@
+{
+  "brand": {
+    "name": "minmini",
+    "fullName": "MinMini Outfits",
+    "tagline": "Dresses for the slow, golden hours.",
+    "season": "Autumn · Winter 26"
+  },
+  "announcement": [
+    "Free shipping across India over ₹2,999",
+    "Easy 15-day exchanges",
+    "Handfinished in Jaipur, Lucknow & Tiruppur",
+    "New: The Evening Edit has landed"
+  ],
+  "nav": [
+    { "label": "Shop all", "href": "/collection" },
+    { "label": "Maxi", "href": "/collection?category=maxi" },
+    { "label": "Midi", "href": "/collection?category=midi" },
+    { "label": "Evening", "href": "/collection?category=evening" },
+    { "label": "Ethnic Fusion", "href": "/collection?category=ethnic" }
+  ],
+  "hero": {
+    "eyebrow": "The AW26 Collection",
+    "title": [
+      { "text": "Dressed in" },
+      { "text": "quiet", "italic": true },
+      { "text": "poetry." }
+    ],
+    "body": "Small-batch dresses cut from honest fabrics and finished by hand. Made in limited runs, so what you wear stays a little bit yours.",
+    "primaryCta": { "label": "Shop the collection", "href": "/collection" },
+    "secondaryCta": { "label": "View the lookbook", "href": "#lookbook" },
+    "stats": [
+      { "value": "16", "label": "New silhouettes" },
+      { "value": "48h", "label": "Dispatch" },
+      { "value": "4.8★", "label": "From 2,000+ reviews" }
+    ],
+    "featuredSlugs": ["noor-anarkali", "saanjh-satin-slip", "marigold-tiered-maxi"],
+    "badge": "Limited runs · Handfinished · AW26 ·"
+  },
+  "marquee": ["Satin slips", "Tiered maxis", "Anarkalis", "Linen co-ords", "Velvet gowns", "Gingham midis", "Chikankari", "Puff-sleeve minis"],
+  "edit": {
+    "eyebrow": "Edit no. 07",
+    "title": "Pieces we can't stop reaching for",
+    "body": "Hand-picked by our studio this month — the dresses that went from sample rail to our own wardrobes.",
+    "cta": { "label": "See every dress", "href": "/collection" }
+  },
+  "lookbook": {
+    "eyebrow": "Lookbook — Chapter 07",
+    "title": "The Evening Edit",
+    "quote": "A dress should feel like the last hour of daylight — warm, unhurried, a little golden.",
+    "body": "Satin that pools the light, velvet that holds the night, and sequins that catch every candle. Our after-dark capsule, made in runs of just 60 pieces each.",
+    "slugs": ["velvet-hour-gown", "saanjh-satin-slip", "moonlit-sequin-midi"],
+    "cta": { "label": "Shop Evening", "href": "/collection?category=evening" }
+  },
+  "values": [
+    { "title": "Small batches", "body": "Every style is made in runs of 60–200 pieces. No mountains of deadstock." },
+    { "title": "Honest fabrics", "body": "Cotton, linen, chanderi and mulmul, sourced from mills we visit ourselves." },
+    { "title": "Made by hand", "body": "Block printers, embroiderers and tailors paid fairly, credited by name." }
+  ],
+  "testimonials": [
+    { "name": "Ananya R.", "city": "Bengaluru", "quote": "The satin slip fits like it was cut for me. I've worn it to two weddings and a birthday — compliments every time.", "product": "Saanjh Satin Slip" },
+    { "name": "Meher K.", "city": "Mumbai", "quote": "Finally an anarkali that feels modern but still makes my nani teary-eyed. The gota border is stunning in person.", "product": "Noor Anarkali" },
+    { "name": "Priya S.", "city": "Chennai", "quote": "Softest linen I own. The co-ord has become my airport uniform and my Sunday brunch outfit.", "product": "Coastline Linen Co-ord" }
+  ],
+  "newsletter": {
+    "eyebrow": "The atelier list",
+    "title": "First look at every drop",
+    "body": "Join 40,000 others who hear about new collections, studio stories and private sales before anyone else.",
+    "placeholder": "your@email.com",
+    "cta": "Join the list"
+  },
+  "footer": {
+    "columns": [
+      {
+        "title": "Shop",
+        "links": [
+          { "label": "All dresses", "href": "/collection" },
+          { "label": "Maxi", "href": "/collection?category=maxi" },
+          { "label": "Midi", "href": "/collection?category=midi" },
+          { "label": "Mini", "href": "/collection?category=mini" },
+          { "label": "Co-ord sets", "href": "/collection?category=coords" }
+        ]
+      },
+      {
+        "title": "Help",
+        "links": [
+          { "label": "Size guide", "href": "/collection" },
+          { "label": "Shipping", "href": "/collection" },
+          { "label": "Exchanges", "href": "/collection" },
+          { "label": "Contact us", "href": "/collection" }
+        ]
+      },
+      {
+        "title": "Studio",
+        "links": [
+          { "label": "Our story", "href": "/" },
+          { "label": "Artisans", "href": "/" },
+          { "label": "Journal", "href": "/" }
+        ]
+      }
+    ],
+    "note": "Designed in Chennai. Made across India, in small batches."
+  }
+}

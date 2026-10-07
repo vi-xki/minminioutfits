@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "maxi",
+    "name": "Maxi",
+    "tagline": "Floor-sweeping & breezy",
+    "description": "Long, light silhouettes that move with you — from tiered florals to bias-cut stripes.",
+    "color": "#E0A43A",
+    "pattern": "floral",
+    "silhouette": "maxi"
+  },
+  {
+    "slug": "midi",
+    "name": "Midi",
+    "tagline": "The everyday hero",
+    "description": "Wraps, A-lines and ginghams that work from a 10am meeting to a 10pm dinner.",
+    "color": "#7C8B5A",
+    "pattern": "solid",
+    "silhouette": "wrap"
+  },
+  {
+    "slug": "mini",
+    "name": "Mini",
+    "tagline": "Playful, short & sweet",
+    "description": "Puff sleeves, shirring and polka dots for the days that call for a little mischief.",
+    "color": "#E9B7BE",
+    "pattern": "dots",
+    "silhouette": "mini"
+  },
+  {
+    "slug": "evening",
+    "name": "Evening",
+    "tagline": "After-dark glamour",
+    "description": "Satin slips, velvet gowns and sequins made for candlelight and late arrivals.",
+    "color": "#5A2A4F",
+    "pattern": "solid",
+    "silhouette": "gown"
+  },
+  {
+    "slug": "ethnic",
+    "name": "Ethnic Fusion",
+    "tagline": "Heritage, reimagined",
+    "description": "Anarkalis and kurta sets with hand-block prints and chikankari, cut for today.",
+    "color": "#B3245B",
+    "pattern": "floral",
+    "silhouette": "anarkali"
+  },
+  {
+    "slug": "coords",
+    "name": "Co-ord Sets",
+    "tagline": "Matched to perfection",
+    "description": "Two pieces, endless outfits. Linen, cotton and crepe sets you will wear on repeat.",
+    "color": "#C0643F",
+    "pattern": "stripe",
+    "silhouette": "coord"
+  }
+]
