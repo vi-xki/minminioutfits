@@ -32,6 +32,7 @@
     scroll-behavior: smooth;
   }
   body {
+    overflow-x: clip; /* scroll-drift elements never cause sideways scroll */
     background: var(--color-cream);
     color: var(--color-ink);
     -webkit-font-smoothing: antialiased;

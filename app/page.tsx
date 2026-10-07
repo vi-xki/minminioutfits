@@ -1,6 +1,7 @@
 import Link from "next/link";
 import DressArt from "@/components/DressArt";
 import Marquee from "@/components/Marquee";
+import ScrollDrift from "@/components/ScrollDrift";
 import ProductCard from "@/components/ProductCard";
 import ProductVisual from "@/components/ProductVisual";
 import {
@@ -32,13 +33,14 @@ export default function HomePage() {
           </p>
           <h1 className="mt-6 font-display text-[clamp(3.4rem,9vw,7.5rem)] font-light leading-[0.9] tracking-tight">
             {hero.title.map((line, i) => (
-              <span
-                key={line.text}
-                className={`animate-rise block ${line.italic ? "pl-[12%] italic text-plum" : ""}`}
-                style={{ animationDelay: `${120 + i * 120}ms` }}
-              >
-                {line.text}
-              </span>
+              <ScrollDrift key={line.text} amount={i % 2 ? -36 : 28}>
+                <span
+                  className={`animate-rise block ${line.italic ? "pl-[12%] italic text-plum" : ""}`}
+                  style={{ animationDelay: `${120 + i * 120}ms` }}
+                >
+                  {line.text}
+                </span>
+              </ScrollDrift>
             ))}
           </h1>
           <p className="animate-rise mt-8 max-w-md text-base leading-relaxed text-ink/70 [animation-delay:500ms]">
@@ -116,17 +118,17 @@ export default function HomePage() {
       </section>
 
       {/* ───────────── Marquee ───────────── */}
-      <Marquee
-        items={site.marquee}
-        className="border-y border-ink/10 py-6"
-        itemClassName="font-display text-4xl italic md:text-6xl"
-      />
+      <div className="overflow-hidden border-y border-ink/10 py-6">
+        <ScrollDrift amount={-120} className="-mx-40">
+          <Marquee items={site.marquee} itemClassName="font-display text-4xl italic md:text-6xl" />
+        </ScrollDrift>
+      </div>
 
       {/* ───────────── Shop by mood ───────────── */}
       <section className="mx-auto max-w-7xl px-5 py-24 md:px-8">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <h2 className="font-display text-5xl leading-none md:text-6xl">
-            Shop by <span className="italic text-clay">mood</span>
+            <ScrollDrift amount={40}>Shop by <span className="italic text-clay">mood</span></ScrollDrift>
           </h2>
           <p className="max-w-sm text-sm text-ink/60">
             Six moods, one wardrobe. Pick the feeling first — the dress follows.
@@ -166,7 +168,7 @@ export default function HomePage() {
           <div className="grid gap-10 lg:grid-cols-[1fr_2.4fr]">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-clay">{edit.eyebrow}</p>
-              <h2 className="mt-4 font-display text-5xl leading-[0.95]">{edit.title}</h2>
+              <h2 className="mt-4 font-display text-5xl leading-[0.95]"><ScrollDrift amount={-24}>{edit.title}</ScrollDrift></h2>
               <p className="mt-6 text-sm leading-relaxed text-ink/65">{edit.body}</p>
               <Link href={edit.cta.href} className="link-underline mt-8 inline-block text-sm font-semibold">
                 {edit.cta.label} →
@@ -188,7 +190,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-14 px-5 py-24 md:px-8 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-blush">{lookbook.eyebrow}</p>
-            <h2 className="mt-4 font-display text-6xl font-light italic md:text-8xl">{lookbook.title}</h2>
+            <h2 className="mt-4 font-display text-6xl font-light italic md:text-8xl"><ScrollDrift amount={60}>{lookbook.title}</ScrollDrift></h2>
             <blockquote className="mt-10 border-l-2 border-blush/60 pl-6 font-display text-2xl leading-snug text-paper/90">
               “{lookbook.quote}”
             </blockquote>
@@ -231,7 +233,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-5 py-24 md:px-8">
         <div className="flex items-end justify-between gap-6">
           <h2 className="font-display text-5xl leading-none md:text-6xl">
-            Most <span className="italic text-plum">loved</span>
+            <ScrollDrift amount={-40}>Most <span className="italic text-plum">loved</span></ScrollDrift>
           </h2>
           <Link href="/collection" className="link-underline shrink-0 text-sm font-semibold">
             View all →
@@ -262,7 +264,7 @@ export default function HomePage() {
       {/* ───────────── Testimonials ───────────── */}
       <section className="mx-auto max-w-7xl px-5 py-24 md:px-8">
         <h2 className="text-center font-display text-5xl md:text-6xl">
-          Notes from the <span className="italic text-clay">fitting room</span>
+          <ScrollDrift amount={36}>Notes from the <span className="italic text-clay">fitting room</span></ScrollDrift>
         </h2>
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {site.testimonials.map((t, i) => (
@@ -288,7 +290,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="relative overflow-hidden rounded-t-[200px] bg-clay px-6 py-20 text-center text-paper md:rounded-t-[400px]">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-paper/70">{site.newsletter.eyebrow}</p>
-          <h2 className="mx-auto mt-4 max-w-2xl font-display text-5xl italic md:text-6xl">{site.newsletter.title}</h2>
+          <h2 className="mx-auto mt-4 max-w-2xl font-display text-5xl italic md:text-6xl"><ScrollDrift amount={-30}>{site.newsletter.title}</ScrollDrift></h2>
           <p className="mx-auto mt-5 max-w-md text-sm text-paper/80">{site.newsletter.body}</p>
           <form className="mx-auto mt-10 flex max-w-md items-center gap-2 rounded-full bg-paper p-1.5">
             <input

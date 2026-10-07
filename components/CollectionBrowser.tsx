@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import ProductCard from "./ProductCard";
+import ScrollDrift from "./ScrollDrift";
 import type { Category, Product } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -91,6 +92,7 @@ export default function CollectionBrowser({ products, categories, initialCategor
         </p>
         <div className="mt-4 flex flex-wrap items-end justify-between gap-6">
           <h1 className="font-display text-6xl font-light leading-none md:text-8xl">
+            <ScrollDrift amount={40}>
             {activeCategory ? (
               <>
                 <span className="italic">{activeCategory.name}</span> dresses
@@ -100,6 +102,7 @@ export default function CollectionBrowser({ products, categories, initialCategor
                 Every <span className="italic text-plum">dress</span>
               </>
             )}
+            </ScrollDrift>
           </h1>
           <p className="max-w-sm text-sm leading-relaxed text-ink/60">
             {activeCategory?.description ??

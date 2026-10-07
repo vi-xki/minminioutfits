@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ScrollDrift from "./ScrollDrift";
 import { site } from "@/lib/data";
 
 export default function Footer() {
@@ -33,7 +34,7 @@ export default function Footer() {
         aria-hidden
         className="pointer-events-none select-none whitespace-nowrap text-center font-display text-[22vw] italic leading-[0.8] text-paper/[0.06]"
       >
-        {site.brand.name}
+        <ScrollDrift amount={-80}>{site.brand.name}</ScrollDrift>
       </p>
 
       <div className="mx-auto flex max-w-7xl flex-col justify-between gap-2 border-t border-paper/10 px-5 py-6 text-xs text-paper/50 md:flex-row md:px-8">
