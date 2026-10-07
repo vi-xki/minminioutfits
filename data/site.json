@@ -98,6 +98,7 @@
         ]
       }
     ],
-    "note": "Designed in Chennai. Made across India, in small batches."
+    "note": "Designed in Chennai. Made across India, in small batches.",
+    "developer": { "label": "Vikram", "href": "https://vikrams.vercel.app/" }
   }
 }

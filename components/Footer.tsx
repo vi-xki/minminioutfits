@@ -41,6 +41,17 @@ export default function Footer() {
           © {new Date().getFullYear()} {site.brand.fullName}. All rights reserved.
         </p>
         <p>{site.footer.note}</p>
+        <p>
+          Developed by{" "}
+          <a
+            href={site.footer.developer.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-underline text-paper/80 hover:text-blush"
+          >
+            {site.footer.developer.label}
+          </a>
+        </p>
       </div>
     </footer>
   );

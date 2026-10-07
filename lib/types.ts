@@ -84,5 +84,5 @@ export interface SiteContent {
   values: { title: string; body: string }[];
   testimonials: { name: string; city: string; quote: string; product: string }[];
   newsletter: { eyebrow: string; title: string; body: string; placeholder: string; cta: string };
-  footer: { columns: { title: string; links: Link[] }[]; note: string };
+  footer: { columns: { title: string; links: Link[] }[]; note: string; developer: Link };
 }

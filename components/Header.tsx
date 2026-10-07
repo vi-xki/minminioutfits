@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import logoIcon from "@/assets/images/minmini-concept1-64px.png";
 import { usePathname } from "next/navigation";
 import { useBag } from "./BagProvider";
 import { site } from "@/lib/data";
@@ -48,12 +50,30 @@ export default function Header() {
           </svg>
         </button>
 
-        <Link href="/" className="group flex flex-col items-center leading-none">
-          <span className="font-display text-3xl italic tracking-tight md:text-4xl">
-            {site.brand.name}
-            <span className="text-clay">.</span>
+        <Link
+          href="/"
+          onClick={(e) => {
+            // Already on the home page: a same-URL link won't move, so scroll up instead.
+            if (pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+          className="group flex items-center gap-2 leading-none"
+        >
+          <Image
+            src={logoIcon}
+            alt=""
+            priority
+            className="h-10 w-10 transition-transform duration-500 group-hover:-rotate-6 md:h-12 md:w-12"
+          />
+          <span className="flex flex-col items-center">
+            <span className="font-display text-3xl italic tracking-tight md:text-4xl">
+              {site.brand.name}
+              <span className="text-clay">.</span>
+            </span>
+            <span className="mt-1 text-[9px] font-semibold uppercase tracking-[0.45em] text-ink/50">Outfits</span>
           </span>
-          <span className="mt-1 text-[9px] font-semibold uppercase tracking-[0.45em] text-ink/50">Outfits</span>
         </Link>
 
         <div className="flex items-center justify-self-end gap-2">
